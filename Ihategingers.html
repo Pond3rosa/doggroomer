@@ -110,7 +110,7 @@
         }
 
         #hero .image-overlay {
-            background-color: rgba(62, 96, 111, 0.7); /* dark-accent with transparency */
+            background-color: rgba(62, 96, 111, 0.9); /* INCREASED OPACITY to 0.9 */
             position: absolute;
             top: 0;
             left: 0;
@@ -120,8 +120,8 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            color: var(--text-light);
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+            color: #FFFFFF; /* Set text color to pure white */
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.4); /* Slightly stronger shadow */
             padding: 80px 20px; /* Increased top/bottom padding within the overlay */
             box-sizing: border-box; /* Ensure padding is included in the element's size */
             text-align: center; /* Ensure text inside is centered */
@@ -143,6 +143,7 @@
             max-width: 900px; /* Constrain width for better readability */
             margin-left: auto;
             margin-right: auto;
+            color: #FFFFFF; /* Ensure consistency with overlay text color */
         }
 
         #hero p {
@@ -151,6 +152,7 @@
             max-width: 900px; /* Constrain width for better readability */
             margin-left: auto;
             margin-right: auto;
+            color: #FFFFFF; /* Ensure consistency with overlay text color */
         }
 
         .btn-group {
@@ -161,7 +163,7 @@
         }
 
         .btn {
-            background: var(--primary-color); /* Changed to primary-color */
+            background: var(--primary-color); /* Soft Teal - for buttons, accents, borders */
             color: white;
             padding: 18px 35px; /* Slightly larger buttons */
             text-decoration: none;
@@ -176,19 +178,19 @@
 
         .btn.secondary {
             background: none;
-            border: 2px solid var(--text-light);
-            color: var(--text-light);
+            border: 2px solid #FFFFFF; /* Border matches text color */
+            color: #FFFFFF; /* Secondary button text color */
             box-shadow: none; /* No shadow for secondary button */
         }
 
         .btn:hover {
-            background: var(--dark-accent); /* Changed to dark-accent */
+            background: var(--dark-accent); /* Deep Blue-Grey */
             transform: translateY(-3px); /* More pronounced hover effect */
             box-shadow: 0 6px 12px rgba(0,0,0,0.3);
         }
         .btn.secondary:hover {
-            background: var(--text-light);
-            color: var(--primary-color); /* Changed to primary-color */
+            background: #FFFFFF; /* White background on hover */
+            color: var(--primary-color); /* Soft Teal text on hover */
             transform: translateY(-3px);
             box-shadow: none;
         }
@@ -264,6 +266,14 @@
             font-size: 1.8em;
             color: var(--dark-accent); /* Changed to dark-accent */
         }
+        /* Style for actual images within content grid */
+        #about .content-grid img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
 
         /* Services */
         #services .service-grid {
@@ -311,9 +321,11 @@
             transform: scale(1.03);
         }
 
-        #gallery .gallery-item .image-placeholder {
-            margin: 0; /* Remove default margin */
-            min-height: 250px;
+        #gallery .gallery-item img { /* NEW CSS for actual gallery images */
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures images cover the area without distortion */
+            display: block;
         }
 
         /* Testimonials */
@@ -565,9 +577,7 @@
                     <p>At Monica's Doggie Spa LLC, our mission is to provide a stress-free, compassionate, and professional grooming experience for every dog. We believe grooming is not just about aesthetics, but about the health and well-being of your furry family member. Our philosophy centers on using gentle handling techniques, premium-grade, natural products, and personalized attention to ensure your dog feels safe, comfortable, and cherished during their visit. We understand that some dogs, like timid or anxious types, thrive in a one-on-one, kennel-free environment, which is exactly what we provide.</p>
                     <p>With years of experience and an unwavering love for animals, Monica, our certified grooming professional, is committed to setting the highest standards in pet care. She continually updates her skills and knowledge to offer the latest techniques and best practices in the industry, ensuring your dog receives the finest treatment possible.</p>
                 </div>
-                <div class="image-placeholder">
-                    [Green placeholder for a professional, warm photo of Monica with a dog, or the salon interior, showcasing its clean and welcoming atmosphere.]
-                </div>
+                <img src="firstone.jpg" alt="Monica grooming a dog, or the interior of the spa" style="width: 100%; height: auto; border-radius: var(--border-radius); box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
             </div>
         </div>
     </section>
@@ -602,7 +612,7 @@
                 </div>
             </div>
             <div class="image-placeholder">
-                [Green placeholder for a high-quality collage of diverse, happy dogs showcasing different grooming styles and clean coats, emphasizing the quality of work at Monica's Doggie Spa LLC.]
+                [Placeholder for a high-quality collage of diverse, happy dogs showcasing different grooming styles and clean coats, emphasizing the quality of work at Monica's Doggie Spa LLC.]
             </div>
         </div>
     </section>
@@ -612,17 +622,17 @@
             <h2>Our Portfolio: Happy Clients, Exquisite Results</h2>
             <p style="text-align: center; margin-bottom: 40px; font-size: 1.1em;">Witness the transformative power of professional grooming and the joy it brings to our canine clients.</p>
             <div class="gallery-grid">
-                <div class="gallery-item"><div class="image-placeholder">Gallery Image 1</div></div>
-                <div class="gallery-item"><div class="image-placeholder">Gallery Image 2</div></div>
-                <div class="gallery-item"><div class="image-placeholder">Gallery Image 3</div></div>
-                <div class="gallery-item"><div class="image-placeholder">Gallery Image 4</div></div>
-                <div class="gallery-item"><div class="image-placeholder">Gallery Image 5</div></div>
-                <div class="gallery-item"><div class="image-placeholder">Gallery Image 6</div></div>
-                <div class="gallery-item"><div class="image-placeholder">Gallery Image 7</div></div>
-                <div class="gallery-item"><div class="image-placeholder">Gallery Image 8</div></div>
+                <div class="gallery-item"><img src="2nd.jpg" alt="Groomed dog photo 1"></div>
+                <div class="gallery-item"><img src="3rd.jpg" alt="Groomed dog photo 2"></div>
+                <div class="gallery-item"><img src="4th.jpg" alt="Groomed dog photo 3"></div>
+                <div class="gallery-item"><img src="5th.jpg" alt="Groomed dog photo 4"></div>
+                <div class="gallery-item"><img src="6th.jpg" alt="Groomed dog photo 5"></div>
+                <div class="gallery-item"><img src="7th.jpg" alt="Groomed dog photo 6"></div>
+                <div class="gallery-item"><img src="8th.jpg" alt="Groomed dog photo 7"></div>
+                <div class="gallery-item"><img src="9th.jpg" alt="Groomed dog photo 8"></div>
             </div>
             <div class="image-placeholder" style="min-height: 150px; margin-top: 40px;">
-                [Green placeholder for a professional photo of the salon or Monica at work, symbolizing the quality of the environment.]
+                [Placeholder for a professional photo of the salon or Monica at work, symbolizing the quality of the environment.]
             </div>
         </div>
     </section>
@@ -695,7 +705,7 @@
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;Saturday - Thursday: Closed</p>
                     <p style="margin-top: 25px; font-weight: bold;">Ready to book? Give us a call at <a href="tel:+16233410520">(623) 341-0520</a> during our operating hours, or send us an email anytime!</p>
                     <div class="image-placeholder" style="min-height: 200px; margin-top: 30px;">
-                        [Green placeholder for an inviting image of Monica's Doggie Spa LLC exterior or a happy dog near the contact info.]
+                        [Placeholder for an inviting image of Monica's Doggie Spa LLC exterior or a happy dog near the contact info.]
                     </div>
                 </div>
             </div>
