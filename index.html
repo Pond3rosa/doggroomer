@@ -548,7 +548,7 @@
             </nav>
             <div class="contact-info">
                 <a href="tel:+16233410520"><i class="fas fa-phone-alt"></i> (623) 341-0520</a>
-                <a href="mailto:info@monicasdoggiespa.com"><i class="fas fa-envelope"></i> info@monicasdoggiespa.com</a> 
+                <a href="mailto:info@monicasdoggiespa.com"><i class="fas fa-envelope"></i> info@monicasdoggiespa.com</a>
             </div>
         </div>
     </header>
@@ -611,9 +611,6 @@
                     <p>For pets with sensitive skin, allergies, or dermatological conditions. We offer a range of specialized shampoos and conditioners prescribed by your veterinarian or chosen for their soothing properties. Administered with care to ensure maximum benefit and comfort.</p>
                 </div>
             </div>
-            <div class="image-placeholder">
-                [Placeholder for a high-quality collage of diverse, happy dogs showcasing different grooming styles and clean coats, emphasizing the quality of work at Monica's Doggie Spa LLC.]
-            </div>
         </div>
     </section>
 
@@ -630,9 +627,6 @@
                 <div class="gallery-item"><img src="7th.jpg" alt="Groomed dog photo 6"></div>
                 <div class="gallery-item"><img src="8th.jpg" alt="Groomed dog photo 7"></div>
                 <div class="gallery-item"><img src="9th.jpg" alt="Groomed dog photo 8"></div>
-            </div>
-            <div class="image-placeholder" style="min-height: 150px; margin-top: 40px;">
-                [Placeholder for a professional photo of the salon or Monica at work, symbolizing the quality of the environment.]
             </div>
         </div>
     </section>
@@ -671,12 +665,6 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <div class="faq-question">What products do you use for grooming?</div>
-                    <div class="faq-answer">
-                        <p>We exclusively use high-quality, professional-grade, all-natural, and hypoallergenic shampoos and conditioners that are pH-balanced for canine skin. We avoid harsh chemicals and artificial fragrances to ensure your dog's comfort and safety.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
                     <div class="faq-question">Do you groom all breeds and sizes?</div>
                     <div class="faq-answer">
                         <p>Yes, our experienced groomers are proficient in handling and styling a wide variety of breeds, from the smallest toy breeds to large and giant breeds. We tailor our services to meet the specific needs of each dog. As Chelsi Sanders noted, Monica is very knowledgeable about the needs of even aging dogs.</p>
@@ -704,9 +692,6 @@
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;Friday: 8:00 AM - 3:00 PM</p>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;Saturday - Thursday: Closed</p>
                     <p style="margin-top: 25px; font-weight: bold;">Ready to book? Give us a call at <a href="tel:+16233410520">(623) 341-0520</a> during our operating hours, or send us an email anytime!</p>
-                    <div class="image-placeholder" style="min-height: 200px; margin-top: 30px;">
-                        [Placeholder for an inviting image of Monica's Doggie Spa LLC exterior or a happy dog near the contact info.]
-                    </div>
                 </div>
             </div>
         </div>
@@ -743,31 +728,3 @@
 
         // FAQ Accordion functionality
         document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                const isActive = question.classList.contains('active');
-
-                // Close all other open answers
-                document.querySelectorAll('.faq-question').forEach(q => {
-                    if (q !== question && q.classList.contains('active')) {
-                        q.classList.remove('active');
-                        q.nextElementSibling.classList.remove('active');
-                        q.nextElementSibling.style.maxHeight = null;
-                    }
-                });
-
-                // Toggle current FAQ item
-                if (isActive) {
-                    question.classList.remove('active');
-                    answer.classList.remove('active');
-                    answer.style.maxHeight = null;
-                } else {
-                    question.classList.add('active');
-                    answer.classList.add('active');
-                    answer.style.maxHeight = answer.scrollHeight + "px"; // Set max-height to fit content
-                }
-            });
-        });
-    </script>
-</body>
-</html>
