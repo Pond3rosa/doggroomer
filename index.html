@@ -102,9 +102,10 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; /* Crucial for centering children */
+            flex-direction: column; /* Stacks content vertically */
+            align-items: center; /* Centers content horizontally within the flex container */
+            justify-content: center; /* Centers content vertically within the flex container */
             min-height: 80vh; /* Changed from 100vh to 80vh for initial view, and min-height */
             padding: 50px 0; /* Add some vertical padding */
             box-sizing: border-box; /* Include padding in height calculation */
@@ -166,10 +167,11 @@
 
         .btn-group {
             display: flex;
-            justify-content: center;
+            justify-content: center; /* Centers buttons horizontally when in a row */
             gap: 25px;
             flex-wrap: wrap;
             margin-bottom: 20px; /* Added margin-bottom to create space below buttons */
+            align-items: center; /* THIS IS KEY: Centers items along the cross axis (horizontally when flex-direction is column) */
         }
 
         .btn {
@@ -184,6 +186,7 @@
             cursor: pointer;
             font-size: 1.2em;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
         }
 
         .btn.secondary {
@@ -505,13 +508,14 @@
                 font-size: 2.2em;
             }
             .btn-group {
-                flex-direction: column;
+                flex-direction: column; /* Stack buttons vertically */
                 gap: 15px; /* Adjusted gap for mobile buttons */
+                /* align-items: center is already set on the main .btn-group rule */
             }
             .btn {
-                width: 90%; /* Increased width slightly for better tap target */
-                max-width: 300px; /* Constrain max width for very large screens */
-                margin: 0 auto;
+                width: 90%; /* Buttons take up 90% of the available width */
+                max-width: 300px; /* Constrain max width for better appearance */
+                /* margin: 0 auto; - REMOVED, as align-items: center on parent does the job */
             }
             #services .service-grid {
                 grid-template-columns: 1fr;
@@ -674,7 +678,7 @@
                 <div class="faq-item">
                     <div class="faq-question">What if my dog is nervous or has anxiety about grooming?</div>
                     <div class="faq-answer">
-                        <p>We specialize in creating a calm and positive one-on-one environment. As mentioned by our client Tatianna Sanchez, our setup ensures your baby is cared for individually and won't be kenneled, which is ideal for anxious pets. Our groomers use gentle handling techniques, positive reinforcement, and take breaks as needed. For highly anxious dogs, we recommend our Puppy Introduction Package (even for older dogs new to grooming) to gradually acclimate them.</p>
+                        <p>We specialize in creating a calm and positive one-on-one environment. As mentioned by our client Tatianna Sanchez, our setup ensures your baby is cared for individually and won't be kenneled, which is ideal for anxious pets. Our groomers use gentle handling techniques, positive reinforcement, and take breaks as needed. For highly anxious dogs, we recommend our Puppy Introduction Package (even for older dogs new to grooming) to gradually accustom them.</p>
                     </div>
                 </div>
                 <div class="faq-item">
